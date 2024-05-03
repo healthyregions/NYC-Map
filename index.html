@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+
+	<title></title>
+
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=yes" /> 
+
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+	<link href="main-style.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,700&family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+
+
+	<!-- JS only -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+
+	<style> 
+		body { margin: 0; padding: 0; } 
+		#map { position: absolute; top: 0; bottom: 0; width: 100%; }; 
+	</style> 
+
+</head>
+
+
+<body> 
+
+	<div class="panel">
+    	
+        <h1 > NYC Neighborhood & Health Map </h1>
+    	
+    	<p class="text-muted"> Health Equity across City Neighborhoods. See XXX for more details. </a> </p>
+
+    	<hr>
+
+        <h5> Proportion of Neighborhood Residents Self-Identified as Black or African American </h5>
+
+    	<p><img src="images/6.png" height="15"><b> 0.0% </p>
+
+        <p><img src="images/5.png" height="15"><b> 0.01 - 22.77% </p>
+
+        <p><img src="images/4.png" height="15"><b> 22.78 - 45.54% </p>
+
+        <p><img src="images/3.png" height="15"><b> 45.55 - 68.2% </p>    	
+        
+        <p><img src="images/2.png" height="15"><b> 68.3 - 91.0% </p>
+
+        <p><img src="images/1.png" height="15"><b> 91.1% </p>
+
+    	<hr>
+
+    	<p class="temp"> <b>Data Sources:</b> NYC Data, 2019. </p>
+
+    	
+	</div>
+
+	<div id='map'> </div> 
+
+	<script> 
+
+        <!-- Temp -- Need to push to Github Environmental Secret -->
+        mapboxgl.accessToken = 'pk.eyJ1IjoiY2Rpc2NlbnphIiwiYSI6ImNsbzhwb25rYjAyeGYya21rd20xZ3U1ZHgifQ.5tbPqubrrKekGR12uOHN_Q';
+    
+            var map = new mapboxgl.Map({ 
+            container: 'map', 
+            style: 'mapbox://styles/cdiscenza/clvmny7ym06yv01nug1kbefwd', 
+            zoom: 10,  
+            minZoom: 5.3,                                               
+            center: [-74.03638858449402 , 40.68048994718785]                         
+    
+         }); 
+    
+    
+        // Add zoom and rotation controls to the map.
+        var nav = new mapboxgl.NavigationControl();
+            
+            map.addControl(nav, 'top-right');
+
+            
+    </script>
+
+
+</body>
+
+</html>
