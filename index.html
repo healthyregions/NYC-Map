@@ -63,10 +63,10 @@
 
 	<div id='map'> </div> 
 
-	<script> 
+    <script src="./secrets.js" />
 
         <!-- Temp -- Need to push to Github Environmental Secret -->
-        mapboxgl.accessToken = 'pk.eyJ1IjoiY2Rpc2NlbnphIiwiYSI6ImNsbzhwb25rYjAyeGYya21rd20xZ3U1ZHgifQ.5tbPqubrrKekGR12uOHN_Q';
+        mapboxgl.accessToken = MAPBOX_API_TOKEN;
     
             var map = new mapboxgl.Map({ 
             container: 'map', 
